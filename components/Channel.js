@@ -21,6 +21,16 @@ const Channel = ({user = null , db = null}) => {
         }
     }, [db]);
 
+
+    return(
+        <ul>
+        {messages.map(message => (
+            <li key={message.id}>{message.text}</li>
+          ))}
+      </ul>
+    );
 };
+
+
 
 export default Channel;
